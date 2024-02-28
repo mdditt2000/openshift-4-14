@@ -17,8 +17,8 @@ spec:
       # Name of the Service Account bound to a Cluster Role with the required
       # permissions
       containers:
-        - name: k8s-bigip-ctlr
-          image: quay.io/f5networks/k8s-bigip-ctlr-devel:multiCluster_beta
+        - name: cntr-ingress-svcs
+          image: registry.connect.redhat.com/f5networks/cntr-ingress-svcs:latest
           imagePullPolicy: Always
           env:
             - name: BIGIP_USERNAME
@@ -46,12 +46,11 @@ spec:
               "--bigip-partition=OpenShift",
               "--namespace=default",
               "--namespace=cafeone",
-              "--namespace=nginx-ingress",
               "--route-label=systest",
               "--pool-member-type=cluster",
               "--controller-mode=openshift",
-              # "--static-routing-mode=true",
-              # "--orchestration-cni=ovn-k8s",
+              "--static-routing-mode=true",
+              "--orchestration-cni=ovn-k8s",
               "--route-spec-configmap=kube-system/global-spec-config",
               "--log-level=DEBUG",
               "--insecure=true",
