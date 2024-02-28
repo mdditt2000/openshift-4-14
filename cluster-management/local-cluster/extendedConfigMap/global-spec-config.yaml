@@ -7,9 +7,13 @@ metadata:
   namespace: kube-system
 data:
   extendedSpec: |
-    multiClusterConfigs:
-    - clusterName: openshift-4-14
-      secret: default/openshift-4-14
+    highAvailabilityCIS:
+      primaryCluster:
+        clusterName: local-cluster
+        secret: default/openshift-4-14
+    externalClustersConfig:
+    - clusterName: ocp-pm
+      secret: default/openshift-4-11
     extendedRouteSpec:
     - namespace: default
       vserverAddr: 10.192.125.65
