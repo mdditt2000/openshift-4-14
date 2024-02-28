@@ -7,7 +7,7 @@ metadata:
   namespace: kube-system
 data:
   extendedSpec: |
-    externalClustersConfig:
+    multiClusterConfigs:
     - clusterName: openshift-4-14
       secret: default/openshift-4-14
     extendedRouteSpec:
@@ -15,3 +15,4 @@ data:
       vserverAddr: 10.192.125.65
       vserverName: cafe
       allowOverride: false
+
