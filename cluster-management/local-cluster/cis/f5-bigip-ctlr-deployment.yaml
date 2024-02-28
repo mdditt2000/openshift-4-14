@@ -45,7 +45,6 @@ spec:
               "--bigip-url=10.192.125.60",
               "--bigip-partition=OpenShift",
               "--namespace=default",
-              "--namespace=cafeone",
               "--route-label=systest",
               "--pool-member-type=cluster",
               "--controller-mode=openshift",
