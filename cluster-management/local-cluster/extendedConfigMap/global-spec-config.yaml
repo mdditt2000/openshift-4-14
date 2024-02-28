@@ -9,10 +9,10 @@ data:
   extendedSpec: |
     highAvailabilityCIS:
       primaryCluster:
-        clusterName: local-cluster
+        clusterName: openshift-4-14
         secret: default/openshift-4-14
     externalClustersConfig:
-    - clusterName: ocp-pm
+    - clusterName: openshift-4-11
       secret: default/openshift-4-11
     extendedRouteSpec:
     - namespace: default
