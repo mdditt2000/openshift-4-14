@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   annotations:
-    virtual-server.f5.com/multiClusterServices: '[{"clusterName": "openshift-4-13", "serviceName":
+    virtual-server.f5.com/multiClusterServices: '[{"clusterName": "ocp-pm", "serviceName":
           "tea-svc", "namespace": "cafeone", "port": 8080 }]'
     # you can define either service port or target port in the port value
   labels:
