@@ -8,8 +8,8 @@ metadata:
 data:
   extendedSpec: |
     externalClustersConfig:
-    - clusterName: openshift-4-11
-      secret: default/openshift-4-11
+    - clusterName: openshift-4-15
+      secret: default/openshift-4-15
     extendedRouteSpec:
     - namespace: default
       vserverAddr: 10.192.125.65
