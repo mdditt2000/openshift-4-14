@@ -52,7 +52,7 @@ spec:
               "--static-routing-mode=true",
               "--orchestration-cni=ovn-k8s",
               "--multi-cluster-mode=standalone",
-              "--extended-spec-configmap=kube-system/global-spec-config",
+              "--route-spec-configmap=kube-system/global-spec-config",
               "--log-level=DEBUG",
               "--insecure=true",
               "--as3-validation=true",
