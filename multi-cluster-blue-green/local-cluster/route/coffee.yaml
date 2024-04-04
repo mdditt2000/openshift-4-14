@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: coffee
+  annotations:
+    virtual-server.f5.com/multiClusterServices:
+    '[
+       {
+         "clusterName": "openshift-4-15",
+         "service": "coffee-svc",
+         "namespace": "default",
+         "servicePort": 8080,
+         "weight": 100,
+       },
+       {
+         "clusterName": "openshift-4-15-cm",
+         "service": "coffee-svc",
+         "namespace": "default",
+         "servicePort": 8080,
+         "weight": 0,
+       }
+    ]'  
+spec:
+  host: cafe.example.com
+  path: "/coffee"
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: coffee-svc

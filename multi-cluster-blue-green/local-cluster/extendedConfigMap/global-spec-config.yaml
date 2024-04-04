@@ -7,6 +7,7 @@ metadata:
   namespace: kube-system
 data:
   extendedSpec: |
+    mode: ratio
     externalClustersConfig:
     - clusterName: openshift-4-15
       secret: default/openshift-4-15
