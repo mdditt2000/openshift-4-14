@@ -7,8 +7,8 @@ metadata:
           "openshift-4-15-cm",  "service": "coffee-svc",  "namespace":
           "default",  "servicePort": 8080 "weight": 20, }]'
   labels:
-    name: coffee
     f5type: systest
+  name: cafe-coffee-edge
 spec:
   host: cafe.example.com
   path: /coffee
