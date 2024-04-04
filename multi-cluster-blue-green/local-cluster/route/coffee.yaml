@@ -19,6 +19,8 @@ metadata:
           "port": 8080
           "weight": 0,
           ]'
+  labels:
+    f5type: systest
 spec:
   host: cafe.example.com
   path: "/coffee"
