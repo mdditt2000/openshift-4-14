@@ -51,6 +51,8 @@ spec:
               "--custom-resource-mode=true",
               "--static-routing-mode=false",
               "--orchestration-cni=ovn-k8s",
+              "--multi-cluster-mode=standalone",
+              "--extended-spec-configmap=kube-system/global-spec-config",
               "--log-level=DEBUG",
               "--insecure=true",
               "--as3-validation=true",
