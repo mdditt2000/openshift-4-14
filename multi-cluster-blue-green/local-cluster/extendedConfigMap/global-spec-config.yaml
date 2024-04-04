@@ -10,8 +10,5 @@ data:
     externalClustersConfig:
     - clusterName: openshift-4-15
       secret: default/openshift-4-15
-    extendedRouteSpec:
-    - namespace: default
-      vserverAddr: 10.192.125.65
-      vserverName: cafe
-      allowOverride: false
+    - clusterName: openshift-4-15-cm
+      secret: default/openshift-4-15-cm
