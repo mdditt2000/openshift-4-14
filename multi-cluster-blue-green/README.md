@@ -6,7 +6,7 @@ Demo on YouTube [video]()
 
 ![diagram](https://github.com/mdditt2000/openshift-4-14/blob/main/multi-cluster-blue-green/diagram/2024-04-16_14-52-14.png)
 
-GitHub Repo [repo](https://github.com/mdditt2000/openshift-4-14/tree/main/multi-cluster-blue-green)
+GitHub Repo [repo](https://github.com/mdditt2000/openshift-4-14/blob/main/multi-cluster-blue-green/README.md)
 
 ### Notes
 
