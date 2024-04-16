@@ -4,9 +4,9 @@ This document demonstrates how **F5 can integrate with RedHat Advanced Cluster M
 
 Demo on YouTube [video]()
 
-![diagram]()
+![diagram](https://github.com/mdditt2000/openshift-4-14/blob/main/multi-cluster-blue-green/diagram/2024-04-16_14-52-14.png)
 
-GitHub Repo [repo]()
+GitHub Repo [repo](https://github.com/mdditt2000/openshift-4-14/tree/main/multi-cluster-blue-green)
 
 ### Notes
 
@@ -63,5 +63,6 @@ data:
 1) The route is an A/B route 
 2) mode is set to ratio
 
-However, the cluster ratio doesn't play any role here as we have not defined any cluster ratio values for any of the clusters. So, each cluster will have the equal weightage. Therefore, in this case the traffic distribution will be solely based on the service weights (which is the requirement for this case).
+However, the cluster ratio doesn't play any role here as we have not defined any cluster ratio values for any of the clusters. So, each cluster will have the equal weightage. Therefore, in this case the traffic distribution will be solely based on the service weights (which is the requirement for this case)
+
 
