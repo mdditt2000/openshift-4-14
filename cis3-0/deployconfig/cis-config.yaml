@@ -8,8 +8,6 @@ metadata:
     f5cr: "true"
 spec:
   baseConfig:
-    namespaceLabel: controller=cis
-    nodeLabel: controller=cis
     controllerIdentifier: openshift-4-15-cm
   networkConfig:
     orchestrationCNI: ovn-k8s
