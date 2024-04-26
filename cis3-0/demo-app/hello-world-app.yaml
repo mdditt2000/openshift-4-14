@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-world-app
+  name: hello-world-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-world-app
+  template:
+    metadata:
+      labels:
+        app: hello-world-app
+    spec:
+      containers:
+      - env:
+        - name: service_name
+          value: hello-world-app
+        image: f5devcentral/f5-hello-world:latest
+        imagePullPolicy: Always
+        name: hello-world-app
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-app
+  labels:
+    app: hello-world-app
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: hello-world-app
+  type: ClusterIP

@@ -5,12 +5,12 @@ items:
     metadata:
       labels:
         f5cr: "true"
-      name: coffee
+      name: hello-world
       namespace: default
     spec:
       mode: standard
       pool:
-        service: coffee-svc
+        service: hello-world-app
         servicePort: 8080
       snat: auto
       type: tcp
