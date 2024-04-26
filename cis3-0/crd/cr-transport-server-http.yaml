@@ -15,7 +15,7 @@ items:
       servicePort: 8080
     snat: auto
     type: tcp
-    virtualServerAddress: 10.192.75.+65
+    virtualServerAddress: 10.192.75.65
     virtualServerPort: 80
 kind: List
 metadata:
