@@ -4,13 +4,20 @@ metadata:
   labels:
     app: hello-world-app
   name: hello-world-app
+  namespace: default
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: hello-world-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: hello-world-app
     spec:
@@ -24,19 +31,22 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
+      restartPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world-app
+  annotations:
   labels:
     app: hello-world-app
+  name: hello-world-app
+  namespace: default
 spec:
   ports:
-    - name: http
-      protocol: TCP
-      port: 8080
-      targetPort: 8080
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
   selector:
     app: hello-world-app
   type: ClusterIP
