@@ -12,7 +12,7 @@ spec:
   networkConfig:
     orchestrationCNI: ovn-k8s
     metaData:
-      poolMemberType: cluster
+      poolMemberType: nodeport
       staticRoutingMode: true
   as3Config:
     debugAS3: true

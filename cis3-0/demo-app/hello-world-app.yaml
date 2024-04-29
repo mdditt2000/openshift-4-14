@@ -44,9 +44,10 @@ metadata:
 spec:
   ports:
   - name: http
+    nodePort: 31139
     port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
     app: hello-world-app
-  type: ClusterIP
+  type: NodePort
