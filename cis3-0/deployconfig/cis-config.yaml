@@ -17,6 +17,6 @@ spec:
   as3Config:
     debugAS3: true
   bigIpConfig:
-    - bigIpAddress: 10.192.125.191
+    - bigIpAddress: 10.192.125.178
       bigIpLabel: SJC
       defaultPartition: openshift

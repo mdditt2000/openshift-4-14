@@ -27,7 +27,7 @@ spec:
             secretName: f5-bigip-ctlr-login
       containers:
         - name: k8s-bigip-ctlr
-          image: quay.io/f5networks/k8s-bigip-ctlr-devel:bba6ec034ee28e6655c62af1e402d38bb4ad9be2
+          image: quay.io/f5networks/k8s-bigip-ctlr-devel:edfc4803d7c728c25e4bbc6f4b7c16b9b2ed9c89
           imagePullPolicy: Always
           livenessProbe:
             failureThreshold: 3
