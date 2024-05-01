@@ -1,8 +1,8 @@
 ## Integrating F5 CIS 3.x with F5 BIG-IP Next in OpenShift
 
-This document provides a step-by-step guide how **F5 Container Ingress Services (CIS)** integrates with F5 BIG-IP Next. This document focuses on deploying **F5 CIS** in then standalone OpenShift 4.15 cluster. CIS is configured to detect the Node/Pods using NodePort Mode. Additional demos will cover ClusterIP etc
+This document provides a step-by-step guide how **F5 Container Ingress Services (CIS)** integrates with F5 BIG-IP Next. This document focuses on deploying **F5 CIS** in a standalone OpenShift 4.15 cluster. CIS is configured to detect the Node/Pods using NodePort Mode. Additional demos will cover ClusterIP etc
 
-Demo on YouTube [video]()
+Demo on YouTube [video](https://youtu.be/nYBspS3vnVU)
 
 ![diagram](https://github.com/mdditt2000/openshift-4-14/blob/main/cis3-0/diagram/2024-05-01_12-30-09.png)
 
