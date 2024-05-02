@@ -4,7 +4,7 @@ metadata:
   name: vs-ingresslink
   namespace: nginx-ingress
 spec:
-  virtualServerAddress: "10.192.76.68"
+  virtualServerAddress: "10.192.75.68"
   host: cafe.example.com
   selector:
     matchLabels:
