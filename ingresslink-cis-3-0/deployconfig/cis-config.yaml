@@ -1,0 +1,22 @@
+# note : any change to the cniConfig block requires the CIS to be restarted
+apiVersion: "cis.f5.com/v1"
+kind: DeployConfig
+metadata:
+  name: cis-config
+  namespace: kube-system
+  labels:
+    f5cr: "true"
+spec:
+  baseConfig:
+    controllerIdentifier: openshift-4-15-cm
+  networkConfig:
+    orchestrationCNI: ovn-k8s
+    metaData:
+      poolMemberType: nodeport
+      staticRoutingMode: true
+  as3Config:
+    debugAS3: true
+  bigIpConfig:
+    - bigIpAddress: 10.192.125.178
+      bigIpLabel: SJC
+      defaultPartition: openshift
