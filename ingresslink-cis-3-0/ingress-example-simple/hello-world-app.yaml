@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-app
+  name: hello-world-app-nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-world-app
+      app: hello-world-app-nginx
   template:
     metadata:
       labels:
-        app: hello-world-app
+        app: hello-world-app-nginx
     spec:
       containers:
-      - name: hello-world-app
+      - name: hello-world-app-nginx
         image: f5devcentral/f5-hello-world:latest
         imagePullPolicy: Always
         ports:
@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world-app
+  name: hello-world-app-nginx
 spec:
   ports:
   - port: 8080
@@ -30,4 +30,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: hello-world-app
+    app: hello-world-app-nginx
