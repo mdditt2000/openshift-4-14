@@ -5,7 +5,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: cafe.example.com
+    http:
       paths:
       - path: /
         pathType: Prefix
