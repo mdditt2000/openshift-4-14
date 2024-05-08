@@ -1,10 +1,14 @@
-## Integrating F5 CIS 3.x with F5 BIG-IP Next in OpenShift
+## F5 IngressLink with F5 BIG-IP Next in OpenShift
 
-This document provides a step-by-step guide how **F5 Container Ingress Services (CIS)** integrates with F5 BIG-IP Next. This document focuses on deploying **F5 CIS** in a standalone OpenShift 4.15 cluster. CIS is configured to detect the Node/Pods using NodePort Mode. Additional demos will cover ClusterIP etc
+The F5 IngressLink solution addresses modern app delivery at scale. IngressLink is a resource definition defined between BIG-IP Next and NGINX using F5 CIS and NGINX Ingress Controller.
 
-Demo on YouTube [video](https://youtu.be/nYBspS3vnVU)
+F5 IngressLink is an elegant control plane solution that offers a unified method of working with both technologies from a single interface—offering the best of BIG-IP Next and NGINX and fostering better collaboration across NetOps and DevOps teams. The diagram below demonstrates this use case
 
-![diagram](https://github.com/mdditt2000/openshift-4-14/blob/main/cis3-0/diagram/2024-05-01_12-30-09.png)
+This document provides a step-by-step guide how **F5 (CIS)** integrates with F5 BIG-IP Next using IngressLink. This document focuses on deploying **F5 CIS** in a standalone OpenShift 4.15 cluster. CIS is configured to detect the NGINX Ic using NodePort Mode. Additional demos will cover ClusterIP etc
+
+Demo on YouTube [video]()
+
+![diagram](https://github.com/mdditt2000/openshift-4-14/blob/main/ingresslink-cis-3-0/diagram/2024-05-08_10-25-08.png)
 
 Installing CIS 3.x
 ------------------
@@ -12,7 +16,7 @@ Installing CIS 3.x
 Step 1: Clone the CIS repo
 
 ```shell
-git clone https://github.com/mdditt2000/openshift-4-14/cis3-0
+git clone https://github.com/mdditt2000/openshift-4-14/tree/main/ingresslink-cis-3-0
 ```
 Step 2: Install the RBAC for CIS Controller
 
@@ -47,3 +51,11 @@ Step 6: Update the CIS deployment file with required image and parameters and in
 ```shell
 oc create -f f5-bigip-ctlr-deployment.yaml
 ```
+
+Step 6: Update NGINX IC Operator
+
+#### Step 3 Deploy NGINX Ingress Controller in both Clusters
+
+Deploy the NGINX Ingress Controller in **OpenShift-4-11** for ClusterIP
+
+Getting Started [repo](https://github.com/nginxinc/nginx-ingress-helm-operator#getting-started)
