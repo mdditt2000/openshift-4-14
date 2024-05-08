@@ -1,4 +1,4 @@
-## F5 IngressLink with F5 BIG-IP Next in OpenShift
+## Enhancing NetOps and DevOps Collaboration with F5 BIG-IP Next and NGINX
 
 The F5 IngressLink solution addresses modern app delivery at scale. IngressLink is a resource definition defined between BIG-IP Next and NGINX using F5 CIS and NGINX Ingress Controller.
 
@@ -6,7 +6,7 @@ F5 IngressLink is an elegant control plane solution that offers a unified method
 
 This document provides a step-by-step guide how **F5 (CIS)** integrates with F5 BIG-IP Next using IngressLink. This document focuses on deploying **F5 CIS** in a standalone OpenShift 4.15 cluster. CIS is configured to detect the NGINX Ic using NodePort Mode. Additional demos will cover ClusterIP etc
 
-Demo on YouTube [video]()
+Demo on YouTube [video](https://youtu.be/g_HwYWYi5yM)
 
 ![diagram](https://github.com/mdditt2000/openshift-4-14/blob/main/ingresslink-cis-3-0/diagram/2024-05-08_10-25-08.png)
 
