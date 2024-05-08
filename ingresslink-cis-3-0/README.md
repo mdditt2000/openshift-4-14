@@ -52,10 +52,6 @@ Step 6: Update the CIS deployment file with required image and parameters and in
 oc create -f f5-bigip-ctlr-deployment.yaml
 ```
 
-Step 6: Update NGINX IC Operator
-
-#### Step 3 Deploy NGINX Ingress Controller in both Clusters
-
-Deploy the NGINX Ingress Controller in **OpenShift-4-11** for ClusterIP
+Step 6: Deploy the NGINX Ingress Controller in OpenShift
 
 Getting Started [repo](https://github.com/nginxinc/nginx-ingress-helm-operator#getting-started)
